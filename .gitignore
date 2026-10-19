@@ -1,0 +1,33 @@
+# Environnement Python
+.venv/
+__pycache__/
+*.pyc
+
+# Données : trop volumineuses ou régénérables
+# (data/raw/ est ignoré sauf son README, qui explique où télécharger le jeu)
+data/raw/*
+!data/raw/README.md
+data/processed/
+*.duckdb
+*.duckdb.wal
+*.parquet
+
+# dbt : fichiers générés et profil local
+dbt/p2p/target/
+dbt/p2p/logs/
+dbt/p2p/dbt_packages/
+dbt/p2p/profiles.yml
+logs/
+
+# Carte PM4Py illisible et lourde (19,8 Mo), régénérée par python/carte_processus.py
+outputs/carte_complete.png
+
+# Fichiers temporaires Power BI et Office
+~$*
+*.tmp
+.~lock.*#
+.pbi/localSettings.json
+.pbi/cache.abf
+
+# Secrets
+.env
