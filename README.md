@@ -257,3 +257,18 @@ python python/export_powerbi.py
 ```
 
 **6. Power BI** : ouvrir `powerbi/p2p_dashboard.pbix` dans Power BI Desktop. Les données sont importées dans le fichier, qui s'ouvre sans relancer la chaîne. Pour l'actualiser, faire pointer la source vers `outputs/powerbi/controles.parquet` (Accueil > Transformer les données > Paramètres de la source de données).
+
+---
+
+## Contact
+
+<div align="center">
+
+### Alexis Claudeon
+**Data Analyst | Analytics Engineer junior**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Alexis45140-181717?logo=github&logoColor=white)](https://github.com/Alexis45140)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-alexis--claudeon-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alexis-claudeon)
+[![E-mail](https://img.shields.io/badge/E--mail-alexis.claudeon%40outlook.fr-0078D4)](mailto:alexis.claudeon@outlook.fr)
+
+</div>
