@@ -1,0 +1,14 @@
+# Exemple de profil dbt pour ce projet (DuckDB, base locale).
+#
+# Utilisation : copier ce fichier en profiles.yml dans ce dossier (dbt/p2p),
+# ou ajouter le bloc p2p à ~/.dbt/profiles.yml.
+# dbt/p2p/profiles.yml est ignoré par Git.
+#
+# Le chemin est relatif au dossier dbt/p2p : lancer dbt depuis ce dossier.
+p2p:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "../../data/p2p.duckdb"
+      threads: 4

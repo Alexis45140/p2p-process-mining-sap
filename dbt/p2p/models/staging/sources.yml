@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bpic
+    description: "Journal d'événements BPI Challenge 2019, converti en Parquet"
+    tables:
+      - name: evenements
+        meta:
+          external_location: "../../data/processed/evenements.parquet"

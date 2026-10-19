@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: fct_lignes_commande
+    description: "Une ligne par ligne de commande d'achat, après exclusion des dates aberrantes"
+    columns:
+      - name: cas_id
+        description: "Identifiant de la ligne : numéro de commande + numéro de ligne"
+        tests:
+          - unique
+          - not_null
+      - name: type_rapprochement
+        tests:
+          - accepted_values:
+              arguments:
+                values:
+                  - "3-way match, invoice before GR"
+                  - "3-way match, invoice after GR"
+                  - "Consignment"
+                  - "2-way match"
+      - name: duree_jours
+        tests:
+          - not_null
+
+  - name: fct_controles
+    description: "Une ligne par ligne de commande, avec les quatre contrôles de conformité"
+    columns:
+      - name: cas_id
+        tests:
+          - unique
+          - not_null
+      - name: c1_paye_avant_reception
+        tests:
+          - not_null
