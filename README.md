@@ -1,12 +1,14 @@
 # Processus d'achat : du parcours réel des commandes aux contrôles de conformité
 
-Données réelles issues de l'ERP de type SAP (le logiciel de gestion) d'un grand groupe industriel de peintures : 251 652 lignes de commande de 2018. Une ligne de commande correspond à un article commandé.
+Données réelles extraites du logiciel de gestion SAP d'un grand groupe industriel de peintures : 251 652 lignes de commande de 2018. Une ligne de commande correspond à un article commandé.
 
 ## En bref
 
 - **Question** : les achats suivent-ils le circuit prévu, de la commande au paiement ?
 - **Démarche** : reconstituer le parcours réel de chaque ligne à partir des 1,6 million d'étapes enregistrées par le logiciel (c'est le *process mining*), puis appliquer quatre contrôles de conformité.
 - **Résultats** : un tiers des lignes sans accroc ; 655 lignes payées avant la réception de la marchandise, pour environ 1,75 M€ ; 81 % des commandes sans demande d'achat (la demande interne qui précède normalement la commande).
+- **Recommandation** : traiter d'abord les 655 lignes payées avant réception, puis revoir le blocage du paiement en « facture avant réception » : 102 fournisseurs sont concernés, c'est le processus qu'il faut corriger, pas un fournisseur.
+- **Limite** : une seule entreprise sur une seule année, et le montant d'environ 1,75 M€ est la valeur cumulée des lignes, pas le montant payé.
 - **Outils** : Python, SQL, dbt, Power BI.
 
 ![Carte du processus d'achat : les dix parcours les plus fréquents](outputs/carte_processus_fr.png)
